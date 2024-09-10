@@ -1,0 +1,114 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+.contenedor{
+	width: 1280px;
+	height: 1000px;
+	background: black;
+	margin: auto;
+}
+
+header{
+	width: 1280px;
+	height: 300px;
+	background: red;
+}
+
+nav{
+	width: 1280px;
+	height: 50px;
+	background: green;
+}
+
+section{
+	width: 1280px;
+	height: 550px;
+	background: gray;
+	float: left;
+}
+
+footer{
+	width: 1280px;
+	height: 100px;
+	background: navy;
+		float: left;
+
+}
+
+.galeria{
+	width: 1200px;
+	height: 500px;
+	background: purple;
+	margin-left: 40px;
+	margin-top: 25px;
+	float: left;
+
+}
+
+
+/*codigo slide*/
+
+.slide{
+	width: 100%;
+	margin: auto;
+	overflow: hidden;
+}
+
+.slide ul{
+	display: flex;
+	padding: 0px;
+	width: 400%;
+	animation: movimiento 20s infinite;
+	animation-direction: alternate;
+}
+
+.slide ul li{
+	width: 100%;
+	list-style: none;
+}
+
+.slide img{
+	width: 100%;
+	height: 300px;
+}
+
+/*crear animación*/
+@keyframes movimiento{
+	0%{margin-left:0%;}
+	20%{margin-left:0%;}
+
+	25%{margin-left:-100%;}
+	45%{margin-left:-100%;}
+
+	50%{margin-left:-200%;}
+	70%{margin-left:-200%;}
+
+	75%{margin-left:-300%;}
+	100%{margin-left:-300%;}
+} 
+
+/*Galeria de imagenes*/
+
+article{
+	display: flex;
+	width: 600px;
+	height: 430px;
+	margin: auto;
+	margin-top: 50px;
+}
+
+article img{
+	width: 0px;
+	flex-grow: 1;
+	object-fit: cover;
+	opacity: 0.8;
+	transicion: 0.5s ease;
+}
+
+article img:hover{
+ 	width: 300px;
+	opacity: 1;
+	filter: contrast(120%);
+}
